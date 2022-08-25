@@ -1,0 +1,114 @@
+
+#navbar{
+     width: 100%;
+     padding-top: 10px;
+     display: flex;
+     justify-content: space-between;
+     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+     height: 50px;
+     position:sticky;
+     top: 0px;
+     margin-top: -15px;
+     margin-bottom: 9px;
+     background-color: #ffffff;
+     height: 80px;
+     color: #4f585e;
+}
+
+.right{
+     width: 25%;
+     display: flex;
+     justify-content: space-evenly;
+     margin-right: 100px;
+    
+    
+}
+
+.right>div{
+     text-align: start;
+     margin: auto;
+     font-family: Inter, sans-serif;
+     font-size: 16px;
+     line-height:24px;
+     color: #30363c;
+     height: auto;
+     
+     
+}
+.right div:hover{
+     cursor: pointer;
+     text-decoration-style: dashed;
+}
+.left{
+     display: flex;
+     justify-content: space-between;
+     width: 22%;
+     height: 50px;
+     margin-left:90px;
+     margin-top: 0px;
+     padding-left: 10px;
+     
+}
+.left>img{
+     margin-top: 15px;
+     width: 45%;
+     height: 90%;
+}
+
+.left>div{
+     padding-top: -100px;
+     width: 160px;
+     text-align: end;
+     margin-bottom: 10px;
+     border-left: 1px solid;
+     margin-left: -30px;
+}
+.left>div:hover{
+     cursor: pointer;
+}
+
+p{
+margin: 0px;
+}
+
+#menuBar{
+     
+     display: flex;
+     height: 35px;
+     padding-left: 25%;
+     font-family: Inter, sans-serif;
+     background-color: #eef4ff;
+     color: #4f585e;
+     position: sticky;
+     font-size: 14px;
+     
+}
+#menuBar div{
+
+text-align: center;
+padding-top: 8px;
+margin-right: 20px;
+width: 95px;
+}
+#menuBar> div>p:hover{
+     cursor: pointer;
+     text-decoration: underline;
+}
+
+#path{
+     display: flex;
+     width: 85%;
+     height: 60px;
+     color: #4f585e;
+     font-family: Inter, sans-serif;
+     float: right;
+}
+#path>div{
+     
+     padding-top: 20px;
+     padding-left: 5px;
+     
+}
+#path:hover{
+     cursor: pointer;
+}

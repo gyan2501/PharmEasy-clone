@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="medicine.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicine</title>
+    <script
+      src="https://kit.fontawesome.com/d1d18244ac.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="navbar">
+      <div class="left">
+        <img
+          src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=360x0"
+          alt="logo"
+        />
+      </div>
+      <div class="right">
+        <div id="medlogin"><i class="fa-solid fa-user"></i> Hello, Log in</div>
+        <div id="medoff"><i class="fa-solid fa-badge-percent"></i> Offers</div>
+        <div id="medcart"><i class="fa-solid fa-cart-shopping"></i> cart</div>
+      </div>
+    </div>
+
+    <div id="menuBar">
+      <div id="med"><p>Medicine</p></div>
+      <div id="Hc"><p>Healthcare</p></div>
+      <div id="Lt"><p>Lab Tests</p></div>
+      <div id="Of"><p>Offers</p></div>
+      <div id="Pls"><p>PLUS</p></div>
+      <div id="Hb"><p>Health Blogs</p></div>
+    </div>
+    <div id="path">
+      <div id="home">Home ></div>
+      <div>Order Medicine Online</div>
+    </div>
+  </body>
+</html>
+<script>
+     document.querySelector(".left>img").addEventListener("click", function () {
+     window.location.href = "index.html";
+   });
+
+   document.querySelector("#home").addEventListener("click", function () {
+     window.location.href = "index.html";
+   });
+
+   document.querySelector("#medlogin").addEventListener("click", function () {
+     window.location.href = "login.html";
+   });
+
+</script>

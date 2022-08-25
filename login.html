@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Log in</title>
+     <style>
+          #loginBar{
+               margin-top: -8px;
+               background-color: #10847e;
+               width: 102%;
+               height: 110px;
+               display: flex;
+              
+               
+          }
+          #loginBar>img:nth-child(1){
+               
+               width: 50%;
+               height: 70px;
+               margin: 15px 15px 10px 30px;
+               
+          }
+          #loginBar>img:nth-child(2){
+               width: 29%;
+               height: 91px;
+               margin: 15px;
+               margin-bottom: 0px;
+          }
+          #container{
+              
+               width: 84%;
+               height: 650px;
+               padding: 10px 20px 20px 50px;
+               font-family: Inter, sans-serif;
+              
+               
+          }
+          input{
+               padding-left: 10px;
+               width: 95%;
+               height: 40px;
+               border-radius: 9px;
+               font-size: 17px;
+               margin-bottom: 20px;
+               border-color:  rgba(223, 222, 222, 0.9);
+          }
+          #otp{
+               width: 350px;
+               height: 45px;
+               border-radius: 9px;
+               font-size: 18px;
+               border: none;
+               font-style: bold;
+               background-color: #10847e;
+               color: white;
+               font-family: "Open Sans", sans-serif;
+              
+          }
+          #otp:hover{
+               cursor: pointer;
+               background-color: #10847edd;
+          }
+          p{
+               color:#4f585e;
+               margin-top: 25px;
+               font-size: 12px;
+          }
+          #box{
+               width: 28%;
+             background-color: rgb(255, 255, 255);
+               float:right;
+          }
+          #cancel{
+               float:right;
+               margin-top: 30px;
+               width: 50px;
+               height: 50px;
+               background-color: #10847e;
+               border: none;
+               font-size: 25px;
+               color: white;
+          }
+     </style>
+</head>
+<body>
+     
+         <div id="box">
+          <div id="loginBar">
+               <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png?dim=256x0" alt="">
+               <img src="https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg?dim=256x0" alt="">
+          </div>
+          <div id="container">
+               <h3 style="color:#4f585e ;">Quick Login / Register</h3>
+               <input id="num" type="text" placeholder="Enter your phone number"/>
+               <button id="otp">Continue</button>
+               <p>By clicking continue,you agree with our<span style="color:#10847e ;">&nbsp Privacy Policy</span></p>
+          </div>
+         </div>
+       <button id="cancel">X</button>
+       
+         
+     
+</body>
+</html>
+<script>document.querySelector("#cancel").addEventListener("click", function () {
+     window.location.href = "index.html";
+   });
+  </script>
