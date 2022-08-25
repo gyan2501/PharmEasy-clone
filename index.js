@@ -1,73 +1,40 @@
 
-/*
-let services =[
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0",
-               type  : "Medicine",
-               off : "UPTO 50% OFF",
-     },
+document.querySelector("#login").addEventListener("click", function () {
+     window.location.href = "login.html";
+   });
 
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/labtest_ff.webp?dim=256x0",
-               type  : "Lab Tests",
-               off : "UPTO 70% OFF",
-     },
+   document.querySelector("#Inmed").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/labtest_ff.webp?dim=256x0",
-               type  : "Healthcare",
-               off : "UPTO 60% OFF",
-     },
+   document.querySelector("#Inlab").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/health_blogs_ff.webp?dim=256x0",
-               type  : "Health Blogs",
-               off : undefined,
-     },
+   document.querySelector("#Inhealth").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/plus_ff.webp?dim=256x0",
-               type  : "PLUS",
-               off : "SAVE 5% EXTRA",
-     },
+   document.querySelector("#InheathBlog").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/offers_ff.webp?dim=256x0",
-               type  : "Offers",
-               off : undefined,
-     },
+   document.querySelector("#Inplus").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/offers_1_ff.webp?dim=256x0",
-               type  : "Surgeries",
-              ,
-     },
+   document.querySelector("#Inoffer").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-     {
-          image_url :"https://assets.pharmeasy.in/apothecary/images/value_store.png?dim=256x0",
-               type  : "Value Store",
-               off : "UPTO 50% OFF",
-     },
-];
+   document.querySelector("#Insurg").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-services.map(function(elem){
-     let box = document.createElement("div");
+   document.querySelector("#invalue").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
-     let itemImg = document.createElement("img")
-     itemImg.setAttribute("src",elem.image_url)
 
-     let title = document.createElement("h5")
-     title.innerText = elem.type
      
-     let offer = document.createElement("h5")
-     if (offer.innerText == undefined){
-          offer.innerText = ""
-     } else{
-          offer.innerText = elem.off
-     }
-     
-
-     box.append(itemImg,title,offer);
-
-     document.querySelector("#service").append(box);
-}); */
+  
