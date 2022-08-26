@@ -1,4 +1,3 @@
-
 #navbar{
      width: 100%;
      padding-top: 10px;
@@ -12,6 +11,7 @@
      margin-bottom: 9px;
      background-color: #ffffff;
 }
+
 .right{
      width: 40%;
      display: flex;
@@ -117,7 +117,7 @@ button{
      font-size: 18px;
      position: relative;
      top: -41px;
-     left: 618px;
+     left: 610px;
      font-family:Inter, sans-serif;
      background-color: #10847e;
      color: #eef4ff;
@@ -140,9 +140,10 @@ button:hover{
      flex-direction: row;
      width: 90%;
      margin: auto;
-     
+     margin-bottom: 40px;
      text-align: center;
-     height: 180px; ;
+     height: 180px; 
+    
 
 }
 #service div:hover{
@@ -170,4 +171,52 @@ button:hover{
      color: #f47779;
      line-height: 16px;
      margin-top: -8px;
+}
+#advertisement{
+     display: flex;
+     width: 88%;
+     margin: auto;
+     margin-bottom: 60px;
+}
+#advertisement img{
+     width: 550px;
+     margin-right:25px;
+     border-radius: 25px;
+}
+
+#offersbox{
+     width: 90%;
+     margin: auto;
+     font-family: Inter, sans-serif;
+     
+}
+.offers{
+    display: flex;
+   
+}
+.offers div{
+     display: flex;
+}
+.offers div{
+     width: 300px;
+     margin-right: 20px;
+     border-radius: 8px;
+     padding-top: 18px;
+     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+     padding-bottom: 10px;
+}
+.offers div:hover{
+     cursor: pointer;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.offers >div:nth-child(3){
+     background: rgb(165,238,235);
+     background: linear-gradient(297deg, rgba(165,238,235,0.9444152661064426) 6%, rgba(227,246,244,1) 58%);
+}
+.offers>div img{
+     width: 50px;
+     margin-left: 10px;
+     border-radius: 8px;
+     margin-right: 10px;
 }

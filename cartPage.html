@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CartPage</title>
+     <script
+     src="https://kit.fontawesome.com/d1d18244ac.js"
+     crossorigin="anonymous"
+   ></script>
+  
+     <style>
+     #navbar{
+     width: 100%;
+     padding-top: 10px;
+     display: flex;
+     justify-content: space-between;
+     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+     height: 50px;
+     top: 0px;
+     margin-top: -15px;
+     margin-bottom: 9px;
+     background-color: #ffffff;
+     height: 80px;
+     color: #4f585e;
+     position: sticky;
+}
+
+.right{
+     width: 25%;
+     display: flex;
+     justify-content: space-evenly;
+     margin-right: 100px;
+    
+    
+}
+
+.right>div{
+     text-align: start;
+     margin: auto;
+     font-family: Inter, sans-serif;
+     font-size: 16px;
+     line-height:24px;
+     color: #30363c;
+     height: auto;
+     
+     
+}
+.right div:hover{
+     cursor: pointer;
+     text-decoration-style: dashed;
+}
+.left{
+     display: flex;
+     justify-content: space-between;
+     width: 22%;
+     height: 50px;
+     margin-left:90px;
+     margin-top: 0px;
+     padding-left: 10px;
+     
+}
+.left>img{
+     margin-top: 15px;
+     width: 45%;
+     height: 90%;
+}
+
+.left>div{
+     padding-top: -100px;
+     width: 160px;
+     text-align: end;
+     margin-bottom: 10px;
+     border-left: 1px solid;
+     margin-left: -30px;
+}
+.left>div:hover{
+     cursor: pointer;
+}
+
+p{
+margin:0px
+}
+
+#menuBar{
+     display: flex;
+     position: fixed;
+     height: 35px;
+     padding-left: 25%;
+     font-family: Inter, sans-serif;
+     background-color: #eef4ff;
+     color: #4f585e;
+     width: 100%;
+     font-size: 14px;
+     margin-top: -7px;
+     
+    
+     
+     
+}
+#menuBar div{
+
+text-align: center;
+padding-top: 8px;
+margin-right: 20px;
+width: 95px;
+}
+#menuBar> div>p:hover{
+     cursor: pointer;
+     text-decoration: underline;
+}
+h1{
+     margin-top: 80px;
+     margin-left: 14%;
+     color: #4f585e;
+}
+
+#cartContainer{
+     width: 73%;
+     margin: auto;
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 8px;font-family: Inter, sans-serif;
+     color: #4f585e;
+
+}
+#cartContainer>div{
+     padding: 20px;
+     border-radius: 8px;
+     border:1px solid #e0e1e2;
+}
+#cartContainer img{
+     margin-left: 65px;
+     width: 100px;
+     height: 200px;
+}
+#cartContainer button{
+     width: 100px;
+     height: 40px;
+     border:1px solid #e0e1e2;
+     border-radius: 8px;
+     font-weight: bolder;
+}
+#cartContainer div:hover{
+     cursor: pointer;
+     border:1px solid #10847e;
+}
+#cartContainer button:hover{
+     cursor: pointer;
+background-color: #10847e;
+color: white;
+
+}
+
+
+     </style>
+</head>
+<body>
+     <div id="navbar">
+          <div class="left">
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=360x0"
+              alt="logo"
+            />
+          </div>
+          <div class="right">
+            <div id="medlogin"><i class="fa-solid fa-user"></i> Hello, Log in</div>
+            <div id="medoff"><i class="fa-solid fa-gift"></i> Offers</div>
+            <div id="medcart"><i class="fa-solid fa-cart-shopping"></i> cart</div>
+          </div>
+        </div>
+    
+        <div id="menuBar">
+          <div id="med"><p>Medicine</p></div>
+          <div id="Hc"><p>Healthcare</p></div>
+          <div id="Lt"><p>Lab Tests</p></div>
+          <div id="Of"><p>Offers</p></div>
+          <div id="Pls"><p>PLUS</p></div>
+          <div id="Hb"><p>Health Blogs</p></div>
+        </div>
+        <h1>Cart</h1>
+        <div id="cartContainer"></div>
+     
+</body>
+</html>
+<script>
+     let cartItem = JSON.parse(localStorage.getItem("myCart")) || [];
+
+     cartItem.map(function(elem,i){
+          let box =document.createElement("div");
+
+          let  productimg = document.createElement("img");
+          productimg.setAttribute("src",elem.url_img);
+
+          let productName = document.createElement("h4");
+          productName.innerText = elem.Name;
+
+          let productPrice = document.createElement("h5");
+          productPrice.innerText = elem.mrp;
+
+          let Removebtn  = document.createElement("button");
+          Removebtn.innerText = "Remove Item";
+          
+          Removebtn.addEventListener("click",function(){
+               event.target.parentNode.remove()
+               cartItem.splice(i,1)
+               localStorage.setItem("myCart",JSON.stringify(cartItem))
+          });
+
+          box.append(productimg,productName,productPrice,Removebtn);
+          document.querySelector("#cartContainer").append(box);
+     });
+
+          document.querySelector("#medlogin").addEventListener("click", function () {
+          window.location.href = "login.html";
+          });
+
+          document.querySelector(".left>img").addEventListener("click", function () {
+          window.location.href = "index.html";
+          });
+           document.querySelector("#med").addEventListener("click", function () {
+          window.location.href = "medicine.html";
+          });
+          document.querySelector("#Hc").addEventListener("click", function () {
+          window.location.href = "healthCare.html";
+          });
+          document.querySelector("#Lt").addEventListener("click", function () {
+          window.location.href = "medicine.html";
+          });
+
+          document.querySelector("#Of").addEventListener("click", function () {
+          window.location.href = "medicine.html";
+          });
+          document.querySelector("#Pls").addEventListener("click", function () {
+          window.location.href = "medicine.html";
+          });
+          document.querySelector("#Hb").addEventListener("click", function () {
+          window.location.href = "healthCare.html";
+          });
+ 
+</script>
