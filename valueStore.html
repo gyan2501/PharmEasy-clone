@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>value_store</title>
+     <script src="https://kit.fontawesome.com/d1d18244ac.js" crossorigin="anonymous"></script>
+     <style>
+#navbar{
+     width: 100%;
+     padding-top: 15px;
+     display: flex;
+     justify-content: space-between;
+     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+     height: 70px;
+     position:sticky;
+     top: 0px;
+     margin-top: -15px;
+     margin-bottom: 9px;
+     background-color: #ffffff;
+}
+
+.right{
+     width: 40%;
+     display: flex;
+     justify-content: space-evenly;
+     margin-right: 25px;
+    
+    
+}
+.right>div:nth-child(1){
+     height: 32px;
+     width: 130px;
+     padding-top: 10px;
+     text-align: center;
+     border-radius: 5px;
+}
+
+.right>div{
+     text-align: start;
+     margin: auto;
+     font-family: Inter, sans-serif;
+     font-size: 16px;
+     line-height:24px;
+     color: #30363c;
+     height: auto;
+     
+}
+.right div:hover{
+     cursor: pointer;
+     text-decoration-style: dashed;
+}
+.left{
+     display: flex;
+     justify-content: space-between;
+     width: 22%;
+     height: 50px;
+     margin-left:80px;
+     margin-top: 0px;
+     padding-left: 10px;
+     
+}
+.left>img{
+     width: 45%;
+     height: 90%;
+}
+
+.left>div{
+     padding-top: -100px;
+     width: 160px;
+     text-align: end;
+     margin-bottom: 10px;
+     border-left: 1px solid;
+     margin-left: -30px;
+}
+.left>div:hover{
+     cursor: pointer;
+}
+
+p{
+margin: 0px;
+}
+
+/*menu bar*/
+#menuBar{
+     display: flex;
+     position: fixed;
+     height: 35px;
+     padding-left: 25%;
+     font-family: Inter, sans-serif;
+     background-color: #eef4ff;
+     color: #4f585e;
+     width: 100%;
+     font-size: 14px;
+    
+     
+     
+}
+#menuBar div{
+
+text-align: center;
+padding-top: 8px;
+margin-right: 20px;
+width: 95px;
+}
+#menuBar> div>p:hover{
+     cursor: pointer;
+     text-decoration: underline;
+}
+
+#path{
+     display: flex;
+     width: 85%;
+     height: 60px;
+     color: #4f585e;
+     font-family: Inter, sans-serif;
+     font-size: 12px;
+    margin-left: 200px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+#path>div{
+     
+     padding-top: 40px;
+     padding-left: 5px;
+     
+}
+#path:hover{
+     cursor: pointer;
+}
+/*filter & product section CSS*/
+#container{
+
+width: 73%;
+margin: auto;
+display: flex;
+justify-content: space-between;
+font-family: Inter, sans-serif;
+color: #4f585e;
+}
+.filter{
+     border: 1px solid red;
+     width: 22%;
+}
+.product{
+     width:75% ;
+     
+}
+.sorted{
+    
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 30px;
+}
+.sorted >div:nth-child(2){
+     font-size: 16px;
+     
+}
+ select{
+     width: 260px;
+     margin-top: 12px;
+     padding-left: 8px;
+     margin-left: 50px;
+     font-size: 18px;
+     height: 45px;
+     margin-right: 10px;
+     border-radius: 8px;
+     color: #444647;
+     border: 1px solid #c9c9c9;
+ }
+ select:hover{
+     cursor: pointer;
+
+ }
+
+/* display product*/
+#productGrid{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap: 8px;
+     
+}
+#productGrid >div{
+     padding-left: 25px ;
+     border-radius: 5px;
+     border: 1px solid rgb(229, 227, 227);
+    
+}
+#productGrid >div:hover{
+     cursor: pointer;
+     border: 1px solid #10847e;
+
+}
+
+#productGrid img{
+     margin-top: 25px;
+     margin-left: 40px;
+     width: 50%;
+     height: 200px;
+}
+#productGrid>div>button{
+     width :90px;
+     height:35px;
+     border-radius: 5px;
+     border: none;
+     margin-top: -45px;
+     margin-bottom: 5px;
+     font-family: Inter, sans-serif;
+    background-color: #10847e;
+    color:white;
+     font-weight: bold;
+}
+#productGrid>div>button:hover{
+     cursor: pointer;
+     background-color: #056966;
+}
+
+     </style>
+</head>
+<body>
+     <div id="navbar">
+          <div class="left">
+               <img  src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=360x0" alt="logo">
+               <div>
+                    <p><img style="height: 14px;" src="https://assets.pharmeasy.in/apothecary/images/ic_express%20delivery.svg?dim=32x0" alt=""> Express delivery to</p>
+                    <p> Select Pincode <i class="fa-solid fa-angle-down"></i></i></p>
+               </div>
+          </div>
+          <div class="right">
+               <div id="login"> <i class="fa-solid fa-user"></i> Hello, Log in </div>
+               <div id="off"> <i class="fa-solid fa-gift"></i></i> Offers</div>
+               <div id="cart"> <i class="fa-solid fa-cart-shopping"></i> cart</div>
+          </div>
+
+     </div>
+     <div id="menuBar">
+          <div id="vmed"><p>Medicine</p></div>
+          <div id="Hc"><p>Healthcare</p></div>
+          <div id="Lt"><p>Lab Tests</p></div>
+          <div id="Of"><p>Offers</p></div>
+          <div id="Pls"><p>PLUS</p></div>
+          <div id="Hb"><p>Health Blogs</p></div>
+        </div>
+        <div id="path">
+          <div id="home">Home ></div>
+          <div>All Category ></div>
+          <div>Vlaue Store</div>
+     </div>
+     <div id="container">
+          <div class="filter">
+               <h2>Filter</h2>
+          </div>
+          <div class="product">
+               <div class="sorted">
+                    <div><h2>Value Store</h2> </div>
+                    <div><span>Sorted By:</span>
+                         <select id="sort">
+                         <option value="pop">Popularity</option>
+                         <option value="PLH">Price low to high</option>
+                         <option value="PHL">Price high to low</option>
+                         <option value="Discount">Discount</option>
+                    </select></div>
+                    
+                    
+               </div>
+               <div id="productGrid"></div>
+          </div>
+     </div>
+     
+</body>
+</html>
+<script>
+
+     let productData =[
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/C85844/everherb-shudh-shilajit-15-g-2-1641793276.jpg",
+          Name : "Everherb(Pharmeasy)Shudh shilajit-15g",
+          mrp : "Rs.599.60",
+          },
+
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Q97636/pharmeasy-calcium-magnesium-vitamin-d3-zinc-bones-dental-health-bottle-120-2-1656417535.jpg",
+          Name : "Pharmeasy Calcium,MAgnesium,Vitamin D",
+          mrp : "Rs.449.50",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T01898/liveasy-essentials-womens-diabetic-orthopedic-slippers-red-size-uk-5-us-8-6.1-1641789091.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Z64529/liveasy-essentials-womens-diabetic-orthopedic-slippers-brown-size-uk-9-us-12-6.1-1632781954.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T63955/liveasy-essentials-womens-diabetic-orthopedic-slippers-olive-green-size-uk-5-us-8-2-1632782053.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/P44958/pharmeasy-coccyx-cushion-for-tail-bone-support-prevents-pain-stiffness-for-upto-80-kgs-weight-2-1656420720.jpg",
+          Name : "Pharmeasy Coccyx Cushion For tail Bone support",
+          mrp : "Rs.899.58",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T01898/liveasy-essentials-womens-diabetic-orthopedic-slippers-red-size-uk-5-us-8-6.1-1641789091.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/V51704/liveasy-essentials-mens-diabetic-orthopedic-slippers-blue-size-uk-10-us-11-6.1-1641789530.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T01898/liveasy-essentials-womens-diabetic-orthopedic-slippers-red-size-uk-5-us-8-6.1-1641789091.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Y79593/everherb-by-pharmeasy-jointcare-blend-of-9-powerful-herbs-joint-bone-health-bottle-of-60-tablets-2-1654233020.jpg",
+          Name : "Everherb(by pharmeasy) jointcare blend",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Y79593/everherb-by-pharmeasy-jointcare-blend-of-9-powerful-herbs-joint-bone-health-bottle-of-60-tablets-2-1654233020.jpg",
+          Name : "Everherb(by pharmeasy) Hair & Skin care Oil",
+          mrp : "Rs.272.58",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/E54733/pharmeasy-multivitamin-gummies-2-1656417638.jpg",
+          Name : "pharmeasy Multivitamins capsules",
+          mrp : "Rs.249.50",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/P54860/everherb-aswagandha-90-caps-green-cross-2-1641793751.jpg",
+          Name : "pharmeasy Ashwagandha capsules",
+          mrp : "Rs.399.50",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/G62192/liveasy-foods-raw-chia-seeds-superfood-loaded-with-nutrients-rich-in-proteins-200-grams-2-1656420843.jpg",
+          Name : "pharmeasy Chia Seeds",
+          mrp : "Rs.224.10",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/L01609/pharmeasy-digital-weighing-machine-for-body-weight-with-lcd-display-tempered-glass-6.1-1650890801.jpg",
+          Name : "Pharmeasy Weighing Machine",
+          mrp : "Rs.999.10",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/K64534/liveasy-ortho-care-acupressure-slippers-men-black-size-8-2-1654256244.jpg",
+          Name : "Liveasy Acupressure Slippers",
+          mrp : "Rs.449.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/C28725/liveasy-wellness-daily-protein-provides-energy-vitality-jar-of-400-gram-2-1654077437.jpg",
+          Name : "Liveasy Daily Protein",
+          mrp : "Rs.465.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/D41806/everherb-neem-immunity-booster-skin-body-detoxifier-bottle-of-60-2-1641789019.jpg",
+          Name : "Everherb Neem",
+          mrp : "Rs.459.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/V62842/liveasy-essentials-all-in-one-vaporizer-2-1654233309.jpg",
+          Name : "Liveasy Es on one Vaporizer",
+          mrp : "Rs.399.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/J51815/liveasy-wellness-apple-cider-vinegar-with-mother-improves-metabolism-500ml-bottle-2-1654165611.jpg",
+          Name : "Liveasy Well Apple Cide Vinager",
+          mrp : "Rs.299.30",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/E85132/liveasy-wellness-vitamin-c-990mg-with-zinc-10mg-powerful-immunity-booster-60-veg-tablets-2-1654169544.jpg",
+          Name : "Liveasy Well Vitamin C(900mg)",
+          mrp : "Rs.399.30",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/K78780/pharmeasy-pill-box-organizer-2-1654165485.jpg",
+          Name : "Pharmeasy Organizer",
+          mrp : "Rs.199.30",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/C85844/everherb-shudh-shilajit-15-g-2-1641793276.jpg",
+          Name : "Everherb(Pharmeasy)Shudh shilajit-15g",
+          mrp : "Rs.599.60",
+          },
+
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Q97636/pharmeasy-calcium-magnesium-vitamin-d3-zinc-bones-dental-health-bottle-120-2-1656417535.jpg",
+          Name : "Pharmeasy Calcium,MAgnesium,Vitamin D",
+          mrp : "Rs.449.50",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T01898/liveasy-essentials-womens-diabetic-orthopedic-slippers-red-size-uk-5-us-8-6.1-1641789091.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Z64529/liveasy-essentials-womens-diabetic-orthopedic-slippers-brown-size-uk-9-us-12-6.1-1632781954.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T63955/liveasy-essentials-womens-diabetic-orthopedic-slippers-olive-green-size-uk-5-us-8-2-1632782053.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/P44958/pharmeasy-coccyx-cushion-for-tail-bone-support-prevents-pain-stiffness-for-upto-80-kgs-weight-2-1656420720.jpg",
+          Name : "Pharmeasy Coccyx Cushion For tail Bone support",
+          mrp : "Rs.899.58",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T01898/liveasy-essentials-womens-diabetic-orthopedic-slippers-red-size-uk-5-us-8-6.1-1641789091.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/V51704/liveasy-essentials-mens-diabetic-orthopedic-slippers-blue-size-uk-10-us-11-6.1-1641789530.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/T01898/liveasy-essentials-womens-diabetic-orthopedic-slippers-red-size-uk-5-us-8-6.1-1641789091.jpg",
+          Name : "Liveasy Women's Diabetic & orthopedic Slipper ",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Y79593/everherb-by-pharmeasy-jointcare-blend-of-9-powerful-herbs-joint-bone-health-bottle-of-60-tablets-2-1654233020.jpg",
+          Name : "Everherb(by pharmeasy) jointcare blend",
+          mrp : "Rs.519.48",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/Y79593/everherb-by-pharmeasy-jointcare-blend-of-9-powerful-herbs-joint-bone-health-bottle-of-60-tablets-2-1654233020.jpg",
+          Name : "Everherb(by pharmeasy) Hair & Skin care Oil",
+          mrp : "Rs.272.58",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/E54733/pharmeasy-multivitamin-gummies-2-1656417638.jpg",
+          Name : "pharmeasy Multivitamins capsules",
+          mrp : "Rs.249.50",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/P54860/everherb-aswagandha-90-caps-green-cross-2-1641793751.jpg",
+          Name : "pharmeasy Ashwagandha capsules",
+          mrp : "Rs.399.50",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/G62192/liveasy-foods-raw-chia-seeds-superfood-loaded-with-nutrients-rich-in-proteins-200-grams-2-1656420843.jpg",
+          Name : "pharmeasy Chia Seeds",
+          mrp : "Rs.224.10",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/L01609/pharmeasy-digital-weighing-machine-for-body-weight-with-lcd-display-tempered-glass-6.1-1650890801.jpg",
+          Name : "Pharmeasy Weighing Machine",
+          mrp : "Rs.999.10",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/K64534/liveasy-ortho-care-acupressure-slippers-men-black-size-8-2-1654256244.jpg",
+          Name : "Liveasy Acupressure Slippers",
+          mrp : "Rs.449.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/C28725/liveasy-wellness-daily-protein-provides-energy-vitality-jar-of-400-gram-2-1654077437.jpg",
+          Name : "Liveasy Daily Protein",
+          mrp : "Rs.465.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/D41806/everherb-neem-immunity-booster-skin-body-detoxifier-bottle-of-60-2-1641789019.jpg",
+          Name : "Everherb Neem",
+          mrp : "Rs.459.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/V62842/liveasy-essentials-all-in-one-vaporizer-2-1654233309.jpg",
+          Name : "Liveasy Es on one Vaporizer",
+          mrp : "Rs.399.70",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/J51815/liveasy-wellness-apple-cider-vinegar-with-mother-improves-metabolism-500ml-bottle-2-1654165611.jpg",
+          Name : "Liveasy Well Apple Cide Vinager",
+          mrp : "Rs.299.30",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/E85132/liveasy-wellness-vitamin-c-990mg-with-zinc-10mg-powerful-immunity-booster-60-veg-tablets-2-1654169544.jpg",
+          Name : "Liveasy Well Vitamin C(900mg)",
+          mrp : "Rs.399.30",
+          },
+          {
+          url_img : "https://cdn01.pharmeasy.in/dam/products_otc/K78780/pharmeasy-pill-box-organizer-2-1654165485.jpg",
+          Name : "Pharmeasy Organizer",
+          mrp : "Rs.199.30",
+          },
+          ];
+
+          let cart_arr = JSON.parse(localStorage.getItem("myCart")) || [];
+
+          productData.map(function(elem){
+               let box = document.createElement("div");
+
+               let image = document.createElement("img");
+               image.setAttribute("src",elem.url_img);
+
+               let pName = document.createElement("h4");
+               pName.innerText = elem.Name;
+
+               let btn = document.createElement("button");
+               btn.innerText = "Add To Cart";
+
+               btn.addEventListener("click",function(){
+                    cart_arr.push(elem);
+                    localStorage.setItem("myCart",JSON.stringify(cart_arr));
+               });
+              
+
+               let price = document.createElement("h5");
+               price.innerText = elem.mrp;
+
+               box.append(image,pName,price,btn)
+               
+               
+               document.querySelector("#productGrid").append(box)
+          })
+
+
+          document.querySelector("#cart").addEventListener("click", function () {
+          window.location.href = "cartPage.html";
+          });
+          document.querySelector("#login").addEventListener("click", function () {
+          window.location.href = "login.html";
+          });
+
+          document.querySelector(".left>img").addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
+
+  document.querySelector("#home").addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
+
+
+  document.querySelector("#vmed").addEventListener("click", function () {
+    window.location.href = "medicine.html";
+  });
+  document.querySelector("#Hc").addEventListener("click", function () {
+    window.location.href = "healthCare.html";
+  });
+  document.querySelector("#Lt").addEventListener("click", function () {
+    window.location.href = "medicine.html";
+  });
+
+  document.querySelector("#Of").addEventListener("click", function () {
+    window.location.href = "medicine.html";
+  });
+  document.querySelector("#Pls").addEventListener("click", function () {
+    window.location.href = "medicine.html";
+  });
+
+  document.querySelector("#Hb").addEventListener("click", function () {
+    window.location.href = "healthCare.html";
+  });
+
+  document.querySelector("#home").addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
+          
+
+</script>

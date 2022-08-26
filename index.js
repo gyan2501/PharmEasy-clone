@@ -1,4 +1,41 @@
+document.querySelector("#login").addEventListener("click", function () {
+     window.location.href = "login.html";
+   });
+   document.querySelector("#Inmed").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
 
+   document.querySelector("#Inlab").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
+
+   document.querySelector("#Inhealth").addEventListener("click", function () {
+     window.location.href = "healthCare.html";
+   });
+
+   document.querySelector("#InheathBlog").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
+
+   document.querySelector("#Inplus").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
+
+   document.querySelector("#Inoffer").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
+
+   document.querySelector("#Insurg").addEventListener("click", function () {
+     window.location.href = "medicine.html";
+   });
+
+   document.querySelector("#invalue").addEventListener("click", function () {
+     window.location.href = "valueStore.html";
+   });
+
+   document.querySelector("#cart").addEventListener("click", function () {
+    window.location.href = "cartPage.html";
+  });
 document.querySelector("#login").addEventListener("click", function () {
      window.location.href = "login.html";
    });
@@ -34,7 +71,3 @@ document.querySelector("#login").addEventListener("click", function () {
    document.querySelector("#invalue").addEventListener("click", function () {
      window.location.href = "medicine.html";
    });
-
-
-     
-  
