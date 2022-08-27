@@ -93,11 +93,7 @@ margin:0px
      color: #4f585e;
      width: 100%;
      font-size: 14px;
-     margin-top: -7px;
-     
-    
-     
-     
+     margin-top: -7px;     
 }
 #menuBar div{
 
@@ -121,7 +117,8 @@ h1{
      margin: auto;
      display: grid;
      grid-template-columns: repeat(4,1fr);
-     gap: 8px;font-family: Inter, sans-serif;
+     gap: 8px;
+     font-family: Inter, sans-serif;
      color: #4f585e;
 
 }
@@ -152,6 +149,74 @@ background-color: #10847e;
 color: white;
 
 }
+#checkout{
+     width: 200px;
+     font-size: 20px;
+     height: 50px;
+     border-radius: 8px;
+     border:1px solid #d9dbdc;
+     font-weight: bold;
+}
+#cartDetails{
+     margin-top: -80px;
+     font-family: Inter, sans-serif;
+     color: #4f585e;
+     height: 200px;
+     width: 20%;
+     border-radius: 12px;
+     color: hsl(0, 100%, 1%);
+     background: rgb(165,238,235);
+     background: linear-gradient(297deg, rgba(165,238,235,1) 6%, rgba(227,246,244,1) 58%);
+     padding-top: 50px;
+     margin-left: 70%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#checkout:hover{
+     cursor: pointer;
+    border:1px solid #10847e;
+     color: #10847e;
+}
+   /*Footer CSS*/
+
+   #footer {
+     width: 90%;
+     margin: auto;
+     background-color: #eef4ff;
+     padding: 50px;
+     font-family: Inter, sans-serif;
+     color: #4f585e;
+     margin-top: 100px;
+     line-height: 35px;
+   }
+
+  .up{
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .social{
+       width: 15%;
+  }
+
+  .social>div>img{
+       width: 15%;
+       margin-right: 5px;
+  }
+
+  .down>div:nth-child(2){
+       width: 60%;
+       display: grid;
+       grid-template-columns: repeat(10,1fr);
+       gap: 20px;
+       
+  }
+
+  .down>div>img{
+       width:35px;
+       height: 20px;
+  }
 
 
      </style>
@@ -180,12 +245,103 @@ color: white;
           <div id="Hb"><p>Health Blogs</p></div>
         </div>
         <h1>Cart</h1>
+         <div id="cartDetails"><h3 >Total cart Item :&nbsp<span id="total-item"></span></h3>
+          <h3 >Total cost :&nbsp <span id="total-cost"></span></h3>
+          <button id="checkout">Move to Checkout</button>
+     </div> 
+        
         <div id="cartContainer"></div>
-     
+        
+        <!--Footer section-->
+
+        <div id="footer">
+          <div class="up">
+            <div>
+              <h3>Company</h3>
+              <p>About Us</p>
+              <p>About Us</p>
+              <p>Blog</p>
+              <p>Partner with PharmEasy</p>
+              <p>Sell at PharmEasy</p>
+              <h3>Our Services</h3>
+              <p>Order Medicine</p>
+              <p>Healthcare Products</p>
+              <p>Lab Tests</p>
+            </div>
+            <div>
+              <h3>Featured Categories</h3>
+              <p>Covid Essentials</p>
+              <p>Personal Care</p>
+              <p>Health Food and Drinks</p>
+              <p>Beauty</p>
+              <p>Skin Care</p>
+              <p>Home Care</p>
+              <p>Ayurvedic Care</p>
+              <p>Sexual Wellness</p>
+              <p>Fitness Supplements</p>
+              <p>Mother and Baby Care</p>
+              <p>Healthcare Devices</p>
+              <p>Health Condition</p>
+              <p>Diabetic Care</p>
+              <p>Elderly Care</p>
+              <p>Accessories And Wearables</p>
+              <p>Top Products</p>
+            </div>
+            <div>
+              <h3>Need Help</h3>
+              <p>Browse All Medicines</p>
+              <p>Browse All Molecules</p>
+              <p>Browse All Cities</p>
+              <p>Browse All Areas</p>
+              <p>Browse All Stores</p>
+              <p>FAQs</p>
+              <h3>Policy Info</h3>
+              <p>Editorial Policy</p>
+              <p>Privacy Policy</p>
+              <p>Vulnerability Disclosure Policy</p>
+              <p>Terms and Conditions</p>
+              <p>Customer Support Policy</p>
+              <p>Return Policy</p>
+            </div>
+            <div class="social">
+              <h3>Follow us on</h3>
+              <div >
+                   <img src="https://assets.pharmeasy.in/apothecary/images/Instagram.svg?dim=32x0"></img>
+                   <img src="https://assets.pharmeasy.in/apothecary/images/facebook.svg?dim=32x0"></img>
+                   <img src="https://assets.pharmeasy.in/apothecary/images/Youtube.svg?dim=32x0"></img>
+                   <img src="https://assets.pharmeasy.in/apothecary/images/Twitter.svg?dim=32x0"></img>
+    
+              </div>
+              </div>
+          </div>
+          <div class="down">
+              <div><h3>Our Payment Partners</h3></div>
+              <div>
+                   <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0" alt="">
+                   <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0" alt="">
+              </div>
+         </div>
+         
+        </div>
+        
 </body>
 </html>
 <script>
      let cartItem = JSON.parse(localStorage.getItem("myCart")) || [];
+
+     document.querySelector("#total-item").innerText = cartItem.length;
+     let total = cartItem.reduce(function(acc,ele,i){
+          return acc +Number(ele.mrp)
+     },0)
+     document.querySelector("#total-cost").innerText = total ;
 
      cartItem.map(function(elem,i){
           let box =document.createElement("div");
@@ -197,7 +353,7 @@ color: white;
           productName.innerText = elem.Name;
 
           let productPrice = document.createElement("h5");
-          productPrice.innerText = elem.mrp;
+          productPrice.innerText = "Rs. "+elem.mrp;
 
           let Removebtn  = document.createElement("button");
           Removebtn.innerText = "Remove Item";
@@ -206,6 +362,14 @@ color: white;
                event.target.parentNode.remove()
                cartItem.splice(i,1)
                localStorage.setItem("myCart",JSON.stringify(cartItem))
+
+                document.querySelector("#total-item").innerText = cartItem.length
+
+                 let totalp = cartItem.reduce(function(acc,ele,i){
+                    return acc + Number(ele.mrp).toFixed(2)
+                 },0)
+                 document.querySelector("#total-cost").innerText = Number(totalp).toFixed(2);  ;
+
           });
 
           box.append(productimg,productName,productPrice,Removebtn);

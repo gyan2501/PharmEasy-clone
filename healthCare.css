@@ -165,3 +165,43 @@ width: 95px;
 #category>div>h4{
      margin-right: 10px;
 }
+
+/* Footer CSS*/
+
+#footer {
+     width: 90%;
+     margin: auto;
+     background-color: #eef4ff;
+     padding: 50px;
+     font-family: Inter, sans-serif;
+     color: #4f585e;
+     margin-top: 100px;
+     line-height: 35px;
+   }
+
+  .up{
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .social{
+       width: 15%;
+  }
+
+  .social>div>img{
+       width: 15%;
+       margin-right: 5px;
+  }
+
+  .down>div:nth-child(2){
+       width: 60%;
+       display: grid;
+       grid-template-columns: repeat(10,1fr);
+       gap: 20px;
+       
+  }
+
+  .down>div>img{
+       width:35px;
+       height: 20px;
+  }
