@@ -1,3 +1,4 @@
+
 #navbar{
      width: 100%;
      padding-top: 10px;
@@ -5,6 +6,7 @@
      justify-content: space-between;
      box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
      height: 50px;
+     position:sticky;
      top: 0px;
      margin-top: -15px;
      margin-bottom: 9px;
@@ -12,6 +14,7 @@
      height: 80px;
      color: #4f585e;
      position: sticky;
+
 }
 
 .right{
@@ -73,6 +76,11 @@ margin:0px
 #menuBar{
      display: flex;
      position: fixed;
+      margin: 0px;
+}
+
+#menuBar{
+     display: flex;
      height: 35px;
      padding-left: 25%;
      font-family: Inter, sans-serif;
@@ -80,9 +88,8 @@ margin:0px
      color: #4f585e;
      width: 100%;
      font-size: 14px;
-    
-     
-     
+     position: sticky;
+     font-size: 14px 
 }
 #menuBar div{
 
@@ -109,6 +116,11 @@ width: 95px;
 #path>div{
      
      padding-top: 40px;
+     float: right;
+}
+#path>div{
+     
+     padding-top: 20px;
      padding-left: 5px;
      
 }
@@ -275,7 +287,6 @@ input[type="search"]{
  h2:hover{
      cursor: pointer;
  }
-
  /* Footer CSS */
 
 #footer {
@@ -315,3 +326,4 @@ input[type="search"]{
        width:35px;
        height: 20px;
   }
+
