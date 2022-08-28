@@ -362,15 +362,16 @@ color: white;
                event.target.parentNode.remove()
                cartItem.splice(i,1)
                localStorage.setItem("myCart",JSON.stringify(cartItem))
+         
 
                 document.querySelector("#total-item").innerText = cartItem.length
 
                  let totalp = cartItem.reduce(function(acc,ele,i){
-                    return acc + Number(ele.mrp).toFixed(2)
+                    return acc + Number(ele.mrp)
                  },0)
-                 document.querySelector("#total-cost").innerText = Number(totalp).toFixed(2);  ;
+                 document.querySelector("#total-cost").innerText = totalp.toFixed(2)
 
-          });
+               });
 
           box.append(productimg,productName,productPrice,Removebtn);
           document.querySelector("#cartContainer").append(box);

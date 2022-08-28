@@ -664,7 +664,8 @@ input[type="checkbox"]:hover{
           },
           ];
 
-          
+         var cart_arr = JSON.parse(localStorage.getItem("myCart")) || [];
+
           displayProduct(productData);
           
           function displayProduct(productData){
@@ -686,7 +687,8 @@ input[type="checkbox"]:hover{
                     cart_arr.push(elem);
                     localStorage.setItem("myCart",JSON.stringify(cart_arr));
                });
-              let price = document.createElement("h5");
+              
+               let price = document.createElement("h5");
                price.innerText = "Rs. "+ elem.mrp;
 
                box.append(image,pName,price,btn)
