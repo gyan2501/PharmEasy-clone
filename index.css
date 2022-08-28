@@ -220,4 +220,123 @@ button:hover{
      border-radius: 8px;
      margin-right: 10px;
 }
+#cate{
+     width: 90%;
+     margin:auto;
+     margin-top: 80px;
+     font-family: Inter, sans-serif;
+     font-weight: 30px;
+     color: #30363c;
+     margin-bottom: 80px;
+}
+#cate >h1{
+     margin-bottom: 40px;
+}
+
+#diffcat{
+     display: flex;
+}
+#diffcat>div{
+     font-size: 16px;
+     width: 85%;
+     text-align: center;     
+     margin-right: 20px;
+     
+}
+#diffcat>div:hover{
+     cursor: pointer;
+}
+#diffcat img{
+     width: 80%;
+     height: 120px;
+     padding: 20px;
+     margin-bottom: 15px;
+     border:1px solid #cccc;
+     border-radius: 8px;
+}
+#diffcat img:hover{
+     cursor: pointer;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#concern{
+     width: 90%;
+     height: auto;
+     margin:auto;
+     margin-top: 80px;
+     font-family: Inter, sans-serif;
+     font-weight: 30px;
+     color: #30363c;
+     margin-bottom: 100px;
+    
+}
+#concern>div>h1{
+     margin-bottom: 8px;
+}
+#circle{
+     display: flex;
+     text-align: center;
+     font-size: 16px;
+}
+#circle div{
+     margin-top: 30px;
+     height: 180px;
+     width: 14%;
+}
+#circle div:hover{
+     cursor: pointer;
+}
+#circle img{
+     width: 60%;
+     height: 70%;
+     border-radius: 50%;
+     margin-left: 0px;
+     margin-bottom: 20px;
+}
+#circle img:hover{
+     cursor: pointer;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+
+/* Footer CSS */
+
+#footer {
+     width: 90%;
+     margin: auto;
+     background-color: #eef4ff;
+     padding: 50px;
+     font-family: Inter, sans-serif;
+     color: #4f585e;
+     margin-top: 100px;
+     line-height: 35px;
+   }
+
+  .up{
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .social{
+       width: 15%;
+  }
+
+  .social>div>img{
+       width: 15%;
+       margin-right: 5px;
+  }
+
+  .down>div:nth-child(2){
+       width: 60%;
+       display: grid;
+       grid-template-columns: repeat(10,1fr);
+       gap: 20px;
+       
+  }
+
+  .down>div>img{
+       width:35px;
+       height: 20px;
+  }
 
