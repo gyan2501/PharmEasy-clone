@@ -27,4 +27,4 @@ https://teal-fudge-e0b41d.netlify.app/
 </br>
 <img src="https://github.com/gyan2501/Asset/blob/main/PE/pelogin.png"/>
 </br>
-<img src="https://github.com/gyan2501/Asset/blob/main/PE/peproduct.png"/>
+<img src="https://github.com/gyan2501/Asset/blob/main/PE/peoffer.png"/>
